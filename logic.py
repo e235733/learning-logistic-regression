@@ -4,7 +4,7 @@ import numpy as np
 class Parameter:
     def __init__(self,explain,depend,numExplain,eta_b,eta_w):
         #調整すべきパラメータb:切片、w:d次元分の傾きを作成
-        self.w = np.zeros(numExplain)
+        self.w = np.array([np.zeros(numExplain)])
         self.b = 0.0
         #説明変数X(d次元列ベクトルn個分)
         self.X = explain
@@ -30,8 +30,7 @@ class Parameter:
         return self.b
     
     def get_w(self):
-        return self.w
-    
+        return self.w[0, 0]
 
 
 if __name__ == "__main__":
