@@ -3,13 +3,13 @@ from logic import Parameter
 from plotter import Plotter
 
 NUM_EXPLAIN = 1
-NUM_DATA = 100
+NUM_DATA = 300
 RANGE = 100
 DIST = 30
-SIGMA = 10
-ETA_W = -0.00002
-ETA_B = -0.1
-NUM_STEP = 500
+SIGMA = 15
+ETA_W = 0.00005
+ETA_B = 1
+NUM_STEP = 150
 
 INTERVAL = 0.01
 
