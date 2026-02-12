@@ -14,7 +14,8 @@ class Plotter:
 
     def plot_sigmoid(self, w, b):
         x = np.linspace(0, self.range, 200)
-        y = 1 / (1 + np.exp(-w * x - b))
+        w_abs = abs(w)
+        y = 1 / (1 + np.exp(-w * x - w_abs * b))
         self.ax.plot(x, y)
         
     def show(self, w, b):
