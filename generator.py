@@ -73,8 +73,8 @@ class Generator:
             left_depend = np.zeros(num_left_explain)
             right_depend = np.ones(num_right_explain)
         else:
-            left_depend = np.ones(num_right_explain)
-            right_depend = np.zeros(num_left_explain)
+            left_depend = np.ones(num_left_explain)
+            right_depend = np.zeros(num_right_explain)
         #print("left_depend:\n", left_depend, "\nright_depend:\n", right_depend)
         
         # 結合してシャッフルする
