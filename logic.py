@@ -1,12 +1,16 @@
 import numpy as np
 
-
+#パラメータの編集、調整の唯一許されたクラスを作成
 class Parameter:
     def __init__(self,explain,depend,numExplain,eta_b,eta_w):
+        #調整すべきパラメータb:切片、w:d次元分の傾きを作成
         self.w = np.zeros(numExplain)
         self.b = 0.0
+        #説明変数X(d次元列ベクトルn個分)
         self.X = explain
+        #目的変数y(n個分の0か1のラベル)
         self.y = depend
+        #bとwの学習率
         self.eta_b = eta_b
         self.eta_w = eta_w
     
@@ -17,7 +21,7 @@ class Parameter:
         grad_w = u @ self.X.T
         return grad_b, grad_w
     
-    def sift(self):
+    def shift(self):
         grad_b, grad_w = self.grad()
         self.b -= self.eta_b * grad_b
         self.w -= self.eta_w * grad_w
