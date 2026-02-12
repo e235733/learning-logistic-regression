@@ -7,11 +7,11 @@ NUM_DATA = 100
 RANGE = 100
 DIST = 30
 SIGMA = 10
-ETA_W = 0.0001
-ETA_B = 0.001 
-NUM_STEP = 50
+ETA_W = -0.00002
+ETA_B = -0.1
+NUM_STEP = 500
 
-INTERVAL = 0.1
+INTERVAL = 0.01
 
 # データの生成
 generator = Generator()
